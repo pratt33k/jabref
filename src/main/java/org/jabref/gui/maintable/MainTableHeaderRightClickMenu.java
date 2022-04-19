@@ -1,15 +1,16 @@
 package org.jabref.gui.maintable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.RadioMenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.layout.StackPane;
+
 import org.jabref.gui.DialogService;
 import org.jabref.gui.LibraryTab;
 import org.jabref.gui.maintable.columns.MainTableColumn;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainTableHeaderRightClickMenu extends ContextMenu {
 
@@ -34,7 +35,7 @@ public class MainTableHeaderRightClickMenu extends ContextMenu {
         });
     }
 
-    private RadioMenuItem createRadioMenuItem(TableColumn<BibEntryTableViewModel,?> tableColumn) {
+    private RadioMenuItem createRadioMenuItem(TableColumn<BibEntryTableViewModel, ?> tableColumn) {
         RadioMenuItem radioMenuItem = new RadioMenuItem(((MainTableColumn<?>) tableColumn).getDisplayName());
         return radioMenuItem;
     }
