@@ -223,8 +223,8 @@ public class MainTable extends TableView<BibEntryTableViewModel> {
     }
 
     public void clearAndSelect(BibEntry bibEntry) {
+        getSelectionModel().clearSelection();
         findEntry(bibEntry).ifPresent(entry -> {
-            getSelectionModel().clearSelection();
             getSelectionModel().select(entry);
             scrollTo(entry);
         });
